@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoJardin from "../assets/JardinLogo.webp";
+import LogoBarra from "../assets/BarraLogo.webp";
 
 import Img1 from "../assets/Jardin1.webp";
 import Img2 from "../assets/Jardin2.webp";
@@ -7,8 +7,8 @@ import Img3 from "../assets/Jardin3.webp";
 import Img4 from "../assets/Jardin4.webp";
 import Img5 from "../assets/Jardin5.webp";
 
-import Navbar from "../components/Navbar";
-import Breadcrumbs from "../components/Breadcrumbs";
+import Navbar from "../components/NavbarBarra";
+import Breadcrumbs from "../components/BreadcrumbsBarra";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 
@@ -24,25 +24,28 @@ export default function Home(){
 }, [imagenes.length]);
 
     return(
-        <div className="home-page">
+        <div className="home-page barra-page">
             <Navbar />
             <Breadcrumbs />
             <section className="hero">
                 <div className="hero-info">
                     <img
-                        src={LogoJardin}
+                        src={LogoBarra}
                         className="hero-logo"
                         alt="Logo"
                     />
                     <h1>
-                        ¡Desayuno o comida tú decides!
+                        Boneless & Alitas
                     </h1>
+                    <h2>
+                        Desde 2024
+                    </h2>
                     <p>
-                        Abiertos desde las 8:00 a.m. hasta las 12:00 p.m.
+                        Abiertos desde las 12:00 p.m. hasta las 10:00 p.m.
                         todos los días.
                     </p>
                     <Link
-                        to="/menu"
+                        to="/menubarra"
                         className="home-button"
                     >
                         ¡Dale un vistaso a nuestro Menú!

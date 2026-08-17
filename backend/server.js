@@ -18,43 +18,86 @@ const db = mysql.createPool({
 });
 
 
-app.get('/api/menu', async (req, res) => {
+app.get('/api/menu/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
-            'CALL sp_obtener_menu()'
+            'CALL sp_obtener_menu_jardin()'
         );
         res.json(rows[0]);
     } catch (error) {
-        console.error("Error en sp_obtener_menu:", error);
+        console.error("Error en sp_obtener_menu_jardin:", error);
         res.status(500).json({
             error: 'Error interno del servidor.'
         });
     }
 });
 
-app.get('/api/categorias', async (req, res) => {
+app.get('/api/menu/barra', async (req, res) => {
     try {
         const [rows] = await db.query(
-            'CALL sp_obtener_categorias()'
+            'CALL sp_obtener_menu_barra()'
         );
         res.json(rows[0]);
     } catch (error) {
-        console.error("Error en sp_obtener_categorias:", error);
+        console.error("Error en sp_obtener_menu_barra:", error);
         res.status(500).json({
             error: 'Error interno del servidor.'
         });
     }
 });
 
-app.get('/api/categorias/:id', async (req, res) => {
+app.get('/api/categorias/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
-            'CALL sp_obtener_menu_categoria(?)',
+            'CALL sp_obtener_categorias_jardin()'
+        );
+        res.json(rows[0]);
+    } catch (error) {
+        console.error("Error en sp_obtener_categorias_jardin:", error);
+        res.status(500).json({
+            error: 'Error interno del servidor.'
+        });
+    }
+});
+
+app.get('/api/categorias/barra', async (req, res) => {
+    try {
+        const [rows] = await db.query(
+            'CALL sp_obtener_categorias_barra()'
+        );
+        res.json(rows[0]);
+    } catch (error) {
+        console.error("Error en sp_obtener_categorias_barra:", error);
+        res.status(500).json({
+            error: 'Error interno del servidor.'
+        });
+    }
+});
+
+app.get('/api/categorias/jardin/:id', async (req, res) => {
+    try {
+        const [rows] = await db.query(
+            'CALL sp_obtener_menu_categoria_jardin(?)',
             [req.params.id]
         );
         res.json(rows[0]);
     } catch (error) {
-        console.error("Error en sp_obtener_menu_categorias:", error);
+        console.error("Error en sp_obtener_menu_categoria_jardin:", error);
+        res.status(500).json({
+            error: 'Error interno del servidor.'
+        });
+    }
+});
+
+app.get('/api/categorias/barra/:id', async (req, res) => {
+    try {
+        const [rows] = await db.query(
+            'CALL sp_obtener_menu_categoria_barra(?)',
+            [req.params.id]
+        );
+        res.json(rows[0]);
+    } catch (error) {
+        console.error("Error en sp_obtener_menu_categoria_barra:", error);
         res.status(500).json({
             error: 'Error interno del servidor.'
         });

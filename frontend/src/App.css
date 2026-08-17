@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --barra-bg: #070707;
+    --barra-panel: #121212;
+    --barra-panel-strong: #1a1a1a;
+    --barra-text: #ffffff;
+    --barra-muted: #e6e6e6;
+    --barra-accent: #f4c542;
+    --barra-accent-strong: #e1b51d;
+    --barra-line: rgba(255,255,255,0.12);
+}
 
 *{
     box-sizing:border-box;
@@ -647,6 +658,181 @@ select{
     color:#333;
     background:#fff;
     font-size:18px;
+}
+
+/* ===========================
+   TEMA BARRA
+=========================== */
+
+.barra-page{
+    background: var(--barra-bg);
+    color: var(--barra-text);
+    min-height:100vh;
+    font-family: "Bebas Neue", "Montserrat", sans-serif;
+}
+
+.barra-page .navbar,
+.barra-page .breadcrumbs,
+.barra-page .footer,
+.barra-page .footer-home{
+    background: #050505;
+    color: var(--barra-text);
+    border-color: var(--barra-line);
+}
+
+.barra-page .navbar-btn,
+.barra-page .breadcrumbs-link,
+.barra-page .breadcrumbs-active,
+.barra-page .navbar-user,
+.barra-page .titulo-menu,
+.barra-page .contacto-titulo,
+.barra-page .modal-titulo,
+.barra-page .home-title,
+.barra-page .home-subtitle,
+.barra-page .hero-info h1,
+.barra-page .contacto-item h3,
+.barra-page .food-card h3,
+.barra-page .menu-container h1,
+.barra-page .navbar-logo {
+    font-family: "Bebas Neue", "Montserrat", sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.barra-page .navbar-btn{
+    color: var(--barra-text);
+}
+
+.barra-page .navbar-btn:hover{
+    background: var(--barra-accent);
+    color: #111;
+}
+
+.barra-page .breadcrumbs-link{
+    color: #d9d9d9;
+}
+
+.barra-page .breadcrumbs-link:hover,
+.barra-page .breadcrumbs-active{
+    color: var(--barra-accent);
+}
+
+.barra-page .breadcrumbs-separator{
+    color: rgba(255,255,255,0.6);
+}
+
+.barra-page .container,
+.barra-page .contacto-container,
+.barra-page .food-card,
+.barra-page .modal-content,
+.barra-page .home-content,
+.barra-page .home-page{
+    background: var(--barra-panel);
+    color: var(--barra-text);
+}
+
+.barra-page .food-card,
+.barra-page .contacto-container,
+.barra-page .modal-content,
+.barra-page .categoria-select,
+.barra-page .home-button,
+.barra-page .btn-detalles,
+.barra-page .cerrar-modal {
+    border: 1px solid var(--barra-line);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+}
+
+.barra-page .food-card h3,
+.barra-page .modal-titulo,
+.barra-page .contacto-item h3,
+.barra-page .titulo-menu,
+.barra-page .hero-info h1,
+.barra-page .home-title,
+.barra-page .home-subtitle,
+.barra-page .contacto-titulo {
+    color: var(--barra-text);
+}
+
+.barra-page .categoria,
+.barra-page .descripcion,
+.barra-page .contacto-subtitulo,
+.barra-page .contacto-item p,
+.barra-page .contacto-link,
+.barra-page .hero-info p,
+.barra-page .aviso,
+.barra-page .home-button,
+.barra-page .food-card-body,
+.barra-page .footer,
+.barra-page .footer-home,
+.barra-page .breadcrumbs,
+.barra-page .navbar-user,
+.barra-page .navbar-btn,
+.barra-page .contacto-item,
+.barra-page .contacto-link,
+.barra-page .modal-body {
+    color: var(--barra-text);
+}
+
+.barra-page .precio,
+.barra-page .precio-modal,
+.barra-page .breadcrumbs-active {
+    color: var(--barra-accent);
+}
+
+.barra-page .btn-detalles,
+.barra-page .home-button {
+    background: var(--barra-accent);
+    color: #111;
+    font-family: "Bebas Neue", "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.barra-page .btn-detalles:hover,
+.barra-page .home-button:hover {
+    background: var(--barra-accent-strong);
+}
+
+.barra-page .categoria-select {
+    background-color: var(--barra-panel-strong);
+    color: var(--barra-text);
+    border-color: var(--barra-line);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23f4c542' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 8 9 11 12 8'/%3E%3C/svg%3E");
+}
+
+.barra-page .categoria-select option {
+    background: #111;
+    color: #fff;
+}
+
+.barra-page .modal-overlay {
+    background: rgba(0,0,0,0.8);
+}
+
+.barra-page .cerrar-modal {
+    background: #111;
+    color: var(--barra-text);
+}
+
+.barra-page .cerrar-modal:hover {
+    background: var(--barra-accent);
+    color: #111;
+}
+
+.barra-page .contacto-item {
+    border-bottom-color: var(--barra-line);
+}
+
+.barra-page .contacto-link:hover {
+    color: var(--barra-accent);
+}
+
+.barra-page .footer-home,
+.barra-page .footer {
+    background: #050505;
+    color: var(--barra-text);
+}
+
+.barra-page .home-page {
+    background: var(--barra-bg);
 }
 
 /* ===========================

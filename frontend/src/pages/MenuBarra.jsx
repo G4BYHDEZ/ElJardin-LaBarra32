@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Breadcrumbs from "../components/Breadcrumbs";
+import Navbar from "../components/NavbarBarra";
+import Breadcrumbs from "../components/BreadcrumbsBarra";
 import CategoriaSelect from "../components/CategoriaSelect";
-import Footer from "../components/Footer";
+import Footer from "../components/FooterBarra";
 
 export default function Menu() {
     const [foods, setFoods] = useState([]);
@@ -18,7 +18,7 @@ export default function Menu() {
 
     async function obtenerCategorias() {
         try {
-            const response = await fetch("http://localhost:5111/api/categorias/jardin");
+            const response = await fetch("http://localhost:5111/api/categorias/barra");
             const data = await response.json();
             setCategorias(data);
         } catch (error) {
@@ -28,7 +28,7 @@ export default function Menu() {
 
     async function obtenerMenu() {
         try {
-            const response = await fetch("http://localhost:5111/api/menu/jardin");
+            const response = await fetch("http://localhost:5111/api/menu/barra");
             const data = await response.json();
             setFoods(data);
         } catch (error) {
@@ -44,7 +44,7 @@ export default function Menu() {
             }
 
             const response = await fetch(
-                `http://localhost:5111/api/categorias/jardin/${id}`
+                `http://localhost:5111/api/categorias/barra/${id}`
             );
 
             const data = await response.json();
@@ -63,7 +63,7 @@ export default function Menu() {
     }
 
     return (
-        <div>
+        <div className="barra-page">
             <Navbar />
             <div className="container">
             <Breadcrumbs categoria={nombreCategoria} />

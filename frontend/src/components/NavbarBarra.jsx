@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import LogoJardin from "../assets/JardinLogo.webp";
+import LogoBarra from "../assets/BarraLogo.webp";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/">
-        <img className="navbar-logo" src={LogoJardin} alt="El Jardin" />
+      <Link to="/barra">
+        <img className="navbar-logo" src={LogoBarra} alt="La Barra" />
       </Link>
       <div className="navbar-links">
           <>
             <Link
-              to="/barra"
+              to="/"
               className="navbar-btn"
             >
-              Ir a La Barra
+              Ir a El Jardin
             </Link>
             <Link
-              to="/menu"
+              to="/menubarra"
               className="navbar-btn"
             >
               Menú
             </Link>
             <Link
-              to="/contacto"
+              to="/contactobarra"
               className="navbar-btn"
             >
               Contacto

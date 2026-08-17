@@ -5,7 +5,9 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'http://jardinbarra32.utportfolio.cloud'
+}));
 
 const db = mysql.createPool({
     host: process.env.DB_HOST,
@@ -18,7 +20,7 @@ const db = mysql.createPool({
 });
 
 
-app.get('/api/menu/jardin', async (req, res) => {
+app.get('menu/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_jardin()'
@@ -32,7 +34,7 @@ app.get('/api/menu/jardin', async (req, res) => {
     }
 });
 
-app.get('/api/menu/barra', async (req, res) => {
+app.get('/menu/barra', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_barra()'
@@ -46,7 +48,7 @@ app.get('/api/menu/barra', async (req, res) => {
     }
 });
 
-app.get('/api/categorias/jardin', async (req, res) => {
+app.get('/categorias/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_categorias_jardin()'
@@ -60,7 +62,7 @@ app.get('/api/categorias/jardin', async (req, res) => {
     }
 });
 
-app.get('/api/categorias/barra', async (req, res) => {
+app.get('/categorias/barra', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_categorias_barra()'
@@ -74,7 +76,7 @@ app.get('/api/categorias/barra', async (req, res) => {
     }
 });
 
-app.get('/api/categorias/jardin/:id', async (req, res) => {
+app.get('/categorias/jardin/:id', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_categoria_jardin(?)',
@@ -89,7 +91,7 @@ app.get('/api/categorias/jardin/:id', async (req, res) => {
     }
 });
 
-app.get('/api/categorias/barra/:id', async (req, res) => {
+app.get('/categorias/barra/:id', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_categoria_barra(?)',

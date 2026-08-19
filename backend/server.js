@@ -20,7 +20,7 @@ const db = mysql.createPool({
 });
 
 
-app.get('menu/jardin', async (req, res) => {
+app.get('/menu/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_jardin()'
@@ -34,7 +34,7 @@ app.get('menu/jardin', async (req, res) => {
     }
 });
 
-app.get('menu/barra', async (req, res) => {
+app.get('/menu/barra', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_barra()'
@@ -48,7 +48,7 @@ app.get('menu/barra', async (req, res) => {
     }
 });
 
-app.get('categorias/jardin', async (req, res) => {
+app.get('/categorias/jardin', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_categorias_jardin()'
@@ -62,7 +62,7 @@ app.get('categorias/jardin', async (req, res) => {
     }
 });
 
-app.get('categorias/barra', async (req, res) => {
+app.get('/categorias/barra', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_categorias_barra()'
@@ -76,7 +76,7 @@ app.get('categorias/barra', async (req, res) => {
     }
 });
 
-app.get('categorias/jardin/:id', async (req, res) => {
+app.get('/categorias/jardin/:id', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_categoria_jardin(?)',
@@ -91,7 +91,7 @@ app.get('categorias/jardin/:id', async (req, res) => {
     }
 });
 
-app.get('categorias/barra/:id', async (req, res) => {
+app.get('/categorias/barra/:id', async (req, res) => {
     try {
         const [rows] = await db.query(
             'CALL sp_obtener_menu_categoria_barra(?)',

@@ -1,6 +1,4 @@
-DROP DATABASE IF EXISTS pagina_gabriel;
-CREATE DATABASE pagina_gabriel;
-USE pagina_gabriel;
+USE gabriel_db;
 
 CREATE TABLE categorias_jardin (
 	id INT AUTO_INCREMENT PRIMARY KEY,

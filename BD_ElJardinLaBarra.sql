@@ -284,10 +284,10 @@ VALUES
 -- Combos
 ('Pizza + Boneless',9,'1 Pizza de Pepperoni y 1/2 Orden de Boneless.',180, "ComboPizzaBoneless.webp"),
 ('Burger + Boneless',9,'1 Hamburguesa de Carne o Pechuga de Pollo, 1/2 Orden de Boneless y Papas Fritas.',200, "ComboBurgerBoneless.webp"),
-('Boneless + Fries + Boneless',9,'Boneless (salsa a elegir), Tocino, Papas Fritas y Queso Cheddar.',170, "ComboBonelessFries.webp"),
+('Boneless + Fries',9,'Boneless (salsa a elegir), Tocino, Papas Fritas y Queso Cheddar.',170, "ComboBonelessFries.webp"),
 ('Asada + Fries',9,'Carne asada, Salsa Bandera, Papas Fritas, Tocino, Guacamole, Queso para Nachos.',200, "ComboAsadaFries.webp"),
 ('Sushi + Boneless',9,'1 Rollo a elegir (Chicken, California, Carnivoro, Cielo, mar y tierra) y 1/2 Orden de Boneless.',220, "ComboSushiBoneless.webp"),
-('Sushi + Teriyaki',9,'1 Rollo a elegir (Chicken, California, Carnivoro, Cielo, mar y tierra) y 1 Teriyaki de Pollo.',180, "SushiTeriyaki.webp"),
+('Sushi + Teriyaki',9,'1 Rollo a elegir (Chicken, California, Carnivoro, Cielo, mar y tierra) y 1 Teriyaki de Pollo.',180, "ComboSushiTeriyaki.webp"),
 ('Sushi Especial + Boneless',9,'1 Rollo a elegir (3 Quesos, La Patrona o Barra 32), 1/2 Orden de Boneless y Papas Fritas.',250, "ComboSushiEspBoneless.webp"),
 ('Lasagna + Boneless',9,'1/2 Lasagna y 1/2 Orden de Boneless.',190, "ComboLasagnaBoneless.webp"),
 ('Lasagna + Boneless + Pizza',9,'1/2 Lasagna, Pizza Personal y Boneless.',295, "ComboLasagnaBonelessPizza.webp"),

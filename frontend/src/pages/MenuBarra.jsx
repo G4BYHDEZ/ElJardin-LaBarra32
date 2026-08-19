@@ -18,7 +18,7 @@ export default function Menu() {
 
     async function obtenerCategorias() {
         try {
-            const response = await fetch("http://jardinbarra32.utportfolio.cloud:5111/api/categorias/barra");
+            const response = await fetch("http://jardinbarra32.utportfolio.cloud/api/categorias/barra");
             const data = await response.json();
             setCategorias(data);
         } catch (error) {
@@ -28,7 +28,7 @@ export default function Menu() {
 
     async function obtenerMenu() {
         try {
-            const response = await fetch("http://jardinbarra32.utportfolio.cloud:5111/api/menu/barra");
+            const response = await fetch("http://jardinbarra32.utportfolio.cloud/api/menu/barra");
             const data = await response.json();
             setFoods(data);
         } catch (error) {
@@ -44,7 +44,7 @@ export default function Menu() {
             }
 
             const response = await fetch(
-                `http://jardinbarra32.utportfolio.cloud:5111/api/categorias/barra/${id}`
+                `http://jardinbarra32.utportfolio.cloud/api/categorias/barra/${id}`
             );
 
             const data = await response.json();

@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import LogoBarra from "../assets/BarraLogo.webp";
 
-import Img1 from "../assets/Jardin1.webp";
-import Img2 from "../assets/Jardin2.webp";
-import Img3 from "../assets/Jardin3.webp";
-import Img4 from "../assets/Jardin4.webp";
-import Img5 from "../assets/Jardin5.webp";
+import Img1 from "../assets/Barra1.webp";
+import Img2 from "../assets/Barra2.webp";
+import Img3 from "../assets/Barra3.webp";
 
 import Navbar from "../components/NavbarBarra";
 import Breadcrumbs from "../components/BreadcrumbsBarra";
@@ -13,7 +11,7 @@ import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 
 export default function Home(){
-    const imagenes = [Img1, Img2, Img3, Img4, Img5];
+    const imagenes = [Img1, Img2, Img3];
     const [imagenActual, setImagenActual] = useState(0);
     useEffect(() => {
     const intervalo = setInterval(() => {
@@ -62,7 +60,7 @@ export default function Home(){
                           <img
                               key={i}
                               src={img}
-                              className="slider-img"
+                              className="slider-img-barra"
                           />
                       ))}
                   </div>

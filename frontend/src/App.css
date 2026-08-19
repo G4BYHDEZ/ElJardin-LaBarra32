@@ -389,6 +389,20 @@ select{
     transition:opacity .4s ease;
 }
 
+.slider-img-barra{
+    width:100%;
+    max-width:500px;   /* Ajusta el ancho */
+    height:auto;       /* Mantiene la proporción */
+    background-color: #070707;
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    transition:opacity .4s ease;
+}
+
 .slider{
     flex:1;
     width:100%;
